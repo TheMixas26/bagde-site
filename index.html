@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Badge</title>
+    <title>Визитка)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,6 +16,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            z-index: 1;
         }
         .badge {
             background: #1e1e1e;
@@ -35,8 +36,38 @@
             font-size: 24px;
             margin: 10px 0;
         }
-        p {
-            font-size: 16px;
+        .tabs {
+            margin: 15px 0;
+            z-index: 1;
+        }
+        .tab-btn {
+            background: #2e2e2e;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1;
+        }
+        .tab-btn:hover, .tab-btn.active {
+            background: #0088cc;
+        }
+        .tab-content {
+            display: none;
+            text-align: left;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        li {
             margin: 5px 0;
         }
         .btn {
@@ -48,9 +79,22 @@
             border-radius: 5px;
             margin-top: 10px;
             transition: 0.3s;
+            z-index: 1;
         }
         .btn:hover {
             background: #0077b6;
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        a {
+            color: white;
         }
     </style>
 </head>
@@ -58,5 +102,87 @@
     <div class="badge">
         <img src="photo1.jpg" alt="Profile Picture" class="profile-pic">
         <h1>Амодерни Боровски</h1>
-        <p>Projects, ideas, hobbies and interests!</p>
-        <a href="https://t.me/mixas26" target="_blank" class="btn">Мой Telegram!</a>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('projects')">Проекты</button>
+            <button class="tab-btn" onclick="openTab('links')">Ссылки</button>
+            <button class="tab-btn" onclick="openTab('hobbies')">Хобби</button>
+            <button class="tab-btn" onclick="openTab('interests')">Интересы</button>
+        </div>
+
+        <div id="projects" class="tab-content active">
+            <ul>
+                <li>"Имперские Хроники" -> книга об кусочке истории моего персонажа!</li>
+                <li>Сайт - визитка -> да, тот самый, на котором вы сейчас)</li>
+                <li>Умная куртка -> встроенный повербанк и наушники</li>
+            </ul>
+        </div>
+
+        <div id="links" class="tab-content">
+            <ul>
+                <li><a href="https://t.me/mixas26" target="_blank">Telegram!</a></li>
+                <li><a href="https://steamcommunity.com/id/kwadrat3000/" target="_blank">Steam!</a></li>
+                <li><a href="https://github.com/TheMixas26" target="_blank">GitHub!</a></li>
+                <li><a href="https://themixas26.itch.io/" target="_blank">Itch.io!</a></li>
+            </ul>
+        </div>
+
+        <div id="hobbies" class="tab-content">
+            <ul>
+                <li>Люблю писать, иногда прозу, иногда поэзию.</li>
+                <li>ОБОЖАЮ художников, сам рисовать не умею.</li>
+                <li>Беседы по душам и рассуждения - это чудестно.</li>
+            </ul>
+        </div>
+
+        <div id="interests" class="tab-content">
+            <ul>
+                <li>Инди-игры</li>
+                <li>IT и всё вытекающее</li>
+                <li>Безумные идеи</li>
+            </ul>
+        </div>
+
+        <a href="https://t.me/mixas26" target="_blank" class="btn">Написать!</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1/tsparticles.min.js"></script>
+    <script>
+        tsParticles.load("particles-js", {
+            particles: {
+                number: { value: 150 },
+                size: { value: 1 },
+                move: {
+                    enable: true, 
+                    speed: 0.3, 
+                    direction: "none", 
+                    random: false, 
+                    straight: false 
+                },
+                line_linked: {
+                    enable: true, 
+                    distance: 150, 
+                    color: "#ffffff", 
+                    opacity: 0.4, 
+                    width: 1 
+                }
+            }
+        });
+    </script>
+
+    <script>
+        function openTab(tabName) {
+            var contents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+            var buttons = document.getElementsByClassName('tab-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
