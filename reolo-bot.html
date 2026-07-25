@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Варя (Reolo Bot) — Амодерни Боровски</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="voidfield"></canvas>
+
+<div class="wrap">
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-brand">TheMixas26</div>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="chronicles.html">Хроники</a>
+        <a href="reolo-mod.html">Reolo Mod</a>
+        <a href="reolo-bot.html" class="current">ВАРЯ</a>
+        <a href="https://t.me/mixas26" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="eyebrow">бот / telegram + vk</div>
+    <h1>Reolo <em>Bot</em></h1>
+    <p class="lede">«Предложка Империи» — а для своих просто <strong>Варя</strong>. Она давно переросла обычную предложку и стала маленькой экосистемой ботов вокруг канала «Имперский Вестник» — и, чего уж скрывать, одним из моих самых любимых детищ.</p>
+    <div class="hero-actions">
+      <a href="https://github.com/TheMixas26/reolo_bot" target="_blank" class="btn btn-primary">Код на GitHub</a>
+      <a href="https://t.me/reolo_channel" target="_blank" class="btn btn-ghost">Канал Вестника</a>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="eyebrow">что умеет варя</div>
+    <h2 class="section-title">Возможности</h2>
+    <p>Варя — девочка занятая. Вот чем она держит на себе весь канал:</p>
+    <ul class="shard-list">
+      <li><strong>Модерация</strong> — она сама аккуратно разбирает пользовательские посты, альбомы, вопросы и личные сообщения администратору, прежде чем что-то попадёт в паблик.</li>
+      <li><strong>Публикация</strong> в Telegram-канал и, по желанию, на стену VK.</li>
+      <li><strong>Черновики и отложенные публикации</strong> — она умеет ждать нужного момента.</li>
+      <li><strong>Достижения, профиль и счётчик активности</strong> для читателей канала — Варя всех запоминает.</li>
+      <li><strong>Дни рождения, погодные уведомления и имперский календарь</strong> — она следит за такими вещами, даже когда её не просят.</li>
+      <li>А ещё у неё есть <strong>младшие</strong> — отдельный банковый бот и отдельный RPG-бот с карточной мини-игрой и дуэлями.</li>
+      <li><strong>Интеграция с YandexGPT</strong> по тегу <code>#ai</code> — да, Варя временами советуется с нейросетью.</li>
+    </ul>
+
+    <div class="shard-divider"><span></span></div>
+
+    <div class="eyebrow">как сделано</div>
+    <h2 class="section-title">Мастерская разработчика</h2>
+    <p>Прежде чем выйти на публику, Варя всегда проверяет себя сама — прогоняет собственные тесты, и если что-то не проходит, наружу она попросту не выйдет. Заботливая к другим, она и к себе строга. Сама Варя, банковский и RPG-боты работают в отдельных потоках; VK-адаптер подключается только тогда, когда для него заданы токены.</p>
+    <div class="tag-row">
+      <span class="tag">Python</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">APScheduler</span>
+      <span class="tag">Telegram Bot API</span>
+      <span class="tag">VK API</span>
+      <span class="tag">pytest</span>
+      <span class="tag">YandexGPT</span>
+    </div>
+
+    <div class="shard-divider"><span></span></div>
+
+    <div class="eyebrow">связь с империей</div>
+    <h2 class="section-title">Одна экосистема</h2>
+    <p>Варя обслуживает тот же канал, вокруг которого строится «Имперский Вестник» — ещё один способ, которым вселенная Хроник прорастает за пределы текста. Из всех моих проектов она, пожалуй, единственная, с которой я мысленно здороваюсь по утрам.</p>
+
+    <div class="hero-actions">
+      <a href="chronicles.html" class="btn btn-primary">← про Хроники</a>
+      <a href="reolo-mod.html" class="btn btn-ghost">Reolo Mod →</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <footer>
+      <span class="foot-mono">Варя (Reolo Bot) — в разработке, с любовью</span>
+      <a href="index.html" class="btn btn-ghost">← на главную</a>
+    </footer>
+  </div>
+</div>
+
+<script src="voidfield.js"></script>
+<script src="nav.js"></script>
+<script src="varya-console.js"></script>
+</body>
+</html>
